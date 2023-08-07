@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(https://allfont.ru/allfont.css?fonts=studioscriptctt);
+@keyframes spin-custom {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(460deg);
+    }
+  }
+  @keyframes spin-reverse {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  .animate-spin-slow-open {
+    animation: spin-custom 0.5s linear forwards;
+  }
+  .animate-spin-slow-close {
+    animation: spin-reverse 0.5s linear forwards;
+  }
