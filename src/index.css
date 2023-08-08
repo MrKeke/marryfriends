@@ -3,25 +3,90 @@
 @tailwind utilities;
 @import url(https://allfont.ru/allfont.css?fonts=studioscriptctt);
 @keyframes spin-custom {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(460deg);
-    }
+  0% {
+    transform: rotate(0deg);
   }
-  @keyframes spin-reverse {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
+  100% {
+    transform: rotate(460deg);
   }
+}
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 
-  .animate-spin-slow-open {
-    animation: spin-custom 0.5s linear forwards;
+.animate-spin-slow-open {
+  animation: spin-custom 0.5s linear forwards;
+}
+.animate-spin-slow-close {
+  animation: spin-reverse 0.5s linear forwards;
+}
+@keyframes slideUpEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .animate-spin-slow-close {
-    animation: spin-reverse 0.5s linear forwards;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+@keyframes slideUpLeave {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.animate-slide-up-enter {
+  animation: slideUpEnter 0.5s ease;
+}
+
+.animate-slide-up-leave {
+  animation: slideUpLeave 0.5s ease;
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotateAnimation 0.3s ease-in-out;
+}
+@keyframes openAnswerAnimation {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px; 
+    opacity: 1;
+  }
+}
+
+.animate-answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.open-answer {
+  animation: openAnswerAnimation 0.3s ease-in-out;
+  max-height: 1000px; /* Используйте тот же размер, что и в @keyframes */
+  opacity: 1;
+}
+
