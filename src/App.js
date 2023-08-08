@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <>
-      <Nav>
+      {/* <Nav> */}
         <Header />
         <Body>
           <Timer />
@@ -21,11 +21,11 @@ export default function App() {
 
           <Guest />
           <Answer />
-          <Photo/>
-          <Location/>
-          <Footer/>
+          <Photo />
+          <Location />
+          <Footer />
         </Body>
-      </Nav>
+      {/* </Nav> */}
     </>
   );
 }

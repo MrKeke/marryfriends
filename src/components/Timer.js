@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 function calcTimeLeft() {
   const date = new Date();
@@ -24,7 +24,6 @@ function calcTimeLeft() {
     day: Math.abs(nowTime.day - finishTime.day),
   };
 }
-
 export default function Timer() {
   const [diffTime, setDiffTime] = useState(calcTimeLeft());
 
@@ -49,26 +48,29 @@ export default function Timer() {
 }
 
 function TimeBlock({ value, label }) {
-  if(label === 'Дни'){
-    if(value > 4)label = 'Дней'
-    if([2,3,4].includes(value)) label='Дня'
-   else if(value === 1) label= 'День'
-    if(value === 0) label = 'Дней'
-  }
-  else if(label === "Часы"){
-    if([1,21].includes(value))label = 'Час'
-   else if([2,3,4,22,23,24].includes(value)) label = 'Часа'
-    else label = 'Часов'
-  }  
-  else if(label === "Минуты"){
-    if([1,21,31,41,51].includes(value))label = 'Минута'
-    else if([2,3,4,22,23,24,32,33,34,42,43,44,52,53,54].includes(value)) label = 'Минуты'
-    else label = 'Минут'
-  }
-  else if(label === "Секунды"){
-    if([1,21,31,41,51].includes(value))label = 'Секунда'
-    else if([2,3,4,22,23,24,32,33,34,42,43,44,52,53,54].includes(value)) label = 'Секунды'
-    else label = 'Секунд'
+  if (label === "Дни") {
+    if (value > 4) label = "Дней";
+    if ([2, 3, 4].includes(value)) label = "Дня";
+    else if (value === 1) label = "День";
+    if (value === 0) label = "Дней";
+  } else if (label === "Часы") {
+    if ([1, 21].includes(value)) label = "Час";
+    else if ([2, 3, 4, 22, 23, 24].includes(value)) label = "Часа";
+    else label = "Часов";
+  } else if (label === "Минуты") {
+    if ([1, 21, 31, 41, 51].includes(value)) label = "Минута";
+    else if (
+      [2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54].includes(value)
+    )
+      label = "Минуты";
+    else label = "Минут";
+  } else if (label === "Секунды") {
+    if ([1, 21, 31, 41, 51].includes(value)) label = "Секунда";
+    else if (
+      [2, 3, 4, 22, 23, 24, 32, 33, 34, 42, 43, 44, 52, 53, 54].includes(value)
+    )
+      label = "Секунды";
+    else label = "Секунд";
   }
 
   return (

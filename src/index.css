@@ -72,7 +72,7 @@
     opacity: 0;
   }
   to {
-    max-height: 1000px; 
+    max-height: 1000px;
     opacity: 1;
   }
 }
@@ -81,7 +81,9 @@
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    max-height 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
 }
 
 .open-answer {
@@ -89,4 +91,3 @@
   max-height: 1000px; /* Используйте тот же размер, что и в @keyframes */
   opacity: 1;
 }
-

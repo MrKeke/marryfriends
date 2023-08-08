@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 export default function Header() {
   return (
-    <div className="bg-[url('img/k.jpg')] bg-center bg-cover text-[#425576] bg-no-repeat relative min-h-screen">
+    <div className="bg-[url('img/k.jpg')] bg-center bg-cover text-[#425576] pt-52 bg-no-repeat relative min-h-screen">
       <div className="flex flex-col justify-center items-center pt-[30rem] h-screen text-4xl md:text-7xl">
         <div className="mb-2 md:mb-4 font-names">Дамир</div>
         <img
@@ -18,4 +18,3 @@ export default function Header() {
     </div>
   );
 }
-
