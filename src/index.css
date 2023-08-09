@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(https://allfont.ru/allfont.css?fonts=studioscriptctt);
+
+@font-face {
+  font-family: 'StudioScriptCTT';
+  src: local('StudioScriptCTT'),
+    url('.//fonts/studioscriptctt.ttf') format('truetype');
+}
+
 @keyframes spin-custom {
   0% {
     transform: rotate(0deg);
