@@ -38,7 +38,7 @@ export default function Answer() {
             <img
               src="/plus.svg"
               alt="Toggle"
-              className={`w-6 h-6 ${openAnswers[index] ? "rotate-45" : ""}`}
+              className={`h-6 ${openAnswers[index] ? "rotate-45" : ""}`}
             />
           </div>
           {openAnswers[index] && (

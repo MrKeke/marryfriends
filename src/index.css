@@ -1,11 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url(https://allfont.net/allfont.css?fonts=studioscriptctt);
 @font-face {
   font-family: 'StudioScriptCTT';
   src: local('StudioScriptCTT'),
-    url('.//fonts/studioscriptctt.ttf') format('truetype');
+    url('./fonts/studioscriptctt.ttf')
 }
 
 @keyframes spin-custom {
@@ -94,6 +94,6 @@
 
 .open-answer {
   animation: openAnswerAnimation 0.3s ease-in-out;
-  max-height: 1000px; /* Используйте тот же размер, что и в @keyframes */
+  max-height: 1000px; 
   opacity: 1;
 }
