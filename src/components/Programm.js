@@ -10,12 +10,12 @@ export default function Programm(){
             time: "15:00",
             name: "Фуршет",
             svg: "./food.svg",
-            info: 'Время еды и выпивки',
+            info: '',
         },{
             time: "16:00",
             name: "Выездная церемония",
             svg: "./car.svg",
-            info: 'Едем куда-то',
+            info: '',
         },{
             time: "17:00",
             name: "Банкет",
@@ -51,11 +51,8 @@ export default function Programm(){
         <div className="">
             <div className=" text-center text-3xl text-[#5063a9] font-semibold mb-20">ПРОГРАММА МЕРОПРИЯТИЯ</div>
             <div>{makeLine(list[0])}</div>
-            {/* <div>{makeSphere()}</div> */}
             <div>{makeLine(list[1])}</div>
-            {/* <div>{makeSphere()}</div> */}
             <div>{makeLine(list[2])}</div>
-            {/* <div>{makeSphere()}</div> */}
             <div>{makeLine(list[3])}</div>
             <div>{makeSphere()}</div>
         </div>

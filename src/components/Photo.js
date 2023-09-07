@@ -8,22 +8,12 @@ export default function Photo() {
         Вы сможете увидеть и сохранить себе на память все{" "}
         <a
           className="text-indigo-950 underline"
-          href="#"
+          href="https://disk.yandex.ru/d/wYKiNhQsSOziyg"
           rel="noreferrer"
           target="_blank"
         >
-          фото
-        </a>{" "}
-        и{" "}
-        <a
-          rel="noreferrer"
-          className="text-indigo-950 underline"
-          href="#"
-          target="_blank"
-        >
-          видео
-        </a>{" "}
-        с этого вечера
+          материалы
+        </a>
       </div>
     </div>
   );

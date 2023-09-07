@@ -8,10 +8,16 @@ import Guest from "./components/Guest";
 import Answer from "./components/Answer";
 import Photo from "./components/Photo";
 import Footer from "./components/Footer";
+import { Helmet } from "react-helmet";
 
 export default function App() {
   return (
     <>
+    <Helmet>
+        <title>Wedding</title>
+        <meta name="description" content="Приглашение на нашу свадьбу" />
+        <link id="favicon" rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    </Helmet>
         <Header />
         <Body>
           <Timer />

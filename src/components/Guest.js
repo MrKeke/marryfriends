@@ -1,16 +1,21 @@
 import { useState } from "react";
 import classNames from "classnames";
+import Sitting from "./Sitting";
 
 export default function Guest() {
   const [guestList, setGuestList] = useState(false);
+  const [sitting,setSitting] = useState(false)
 
   const clickHandler = () => {
     setGuestList(!guestList);
   };
+  const clickHandlerSitting = () => {
+    setSitting(!sitting);
+  };
 
   const guests = [
-    'Родионов Валерий Александрович',
-    'Родионова Надежда Дмитриевна',
+    'Радионов Валерий Александрович',
+    'Радионова Надежда Дмитриевна',
     'Боев Виктор Александрович',
     'Боева Татьяна Матвеевна',
     'Мохначева Людмила Фёдоровна',
@@ -18,7 +23,7 @@ export default function Guest() {
     'Карачёва Оксана Валериевна',
     'Мохначев Александр Евгеньевич',
     'Мохначева Анна Викторовна',
-    'Родионов Александр Валериевич ',
+    'Радионов Александр Валериевич ',
     'Тохмахова Нина Сергеевна',
     'Мохначев Вадим Евгеньевич',
     'Мохначева Ирина Ивановна',
@@ -46,6 +51,7 @@ export default function Guest() {
     'Бобрикова Мария Андреевна',
     'Графов Александр Алексеевич',
     'Карих Ульяна Игоревна',
+    'Буркова Софья Александровна',
     'Околова Ксения Максимовна',
     'Цемко Варвара Сергеевна',
     'Храпова Елизавета Евгеньевна',
@@ -76,8 +82,9 @@ export default function Guest() {
           alt="arrow-icon"
         />
       </div>
+      
       {guestList && (
-        <div className="w-full max-w-lg rounded p-4">
+        <div className="w-full max-w-lg rounded text-xs lg:text-xl">
           <table className="w-full table-fixed">
             <tbody>
               {Array.from({ length: guestsPerColumn }).map((_, rowIndex) => (
@@ -97,12 +104,13 @@ export default function Guest() {
                     return (
                       <td
                         key={colIndex}
-                        className={classNames("px-4 py-2 border-[1px] border-opacity-5 border-[#0f2a54]", {
+                        className={classNames(" px-4 py-2 border-[1px] border-opacity-5 border-[#0f2a54]", {
                           "hover:text-red-700 cursor-pointer": isSpecialGuest,
                         })}
                       >
                         {isSpecialGuest ? (
                           <a
+                            
                             href="https://vk.com/foxisfox"
                             rel="noreferrer"
                             target="_blank"
@@ -121,6 +129,20 @@ export default function Guest() {
           </table>
         </div>
       )}
-    </div>
+  <div
+        onClick={clickHandlerSitting}
+        className="flex my-6 border-t-[1px] w-full max-w-md md:max-w-lg justify-between cursor-pointer"
+      >
+        <div className="text-2xl">Рассадка гостей</div>
+        <img
+          className={classNames("h-9 transform", {
+            "rotate-180": sitting,
+          })}
+          src="/icon-strelka.png"
+          alt="arrow-icon"
+        />
+      </div>
+      {sitting && (<Sitting/>  )}
+      </div>
   );
 }
