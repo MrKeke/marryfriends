@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/marryfriends/static/css/main.84f7d46a.css",
+    "main.js": "/marryfriends/static/js/main.c4b9a4d2.js",
+    "static/media/k.jpg": "/marryfriends/static/media/k.53cb95622581ac059e4a.jpg",
+    "static/media/studioscriptctt.ttf": "/marryfriends/static/media/studioscriptctt.11049156939abe5de69e.ttf",
+    "index.html": "/marryfriends/index.html",
+    "main.84f7d46a.css.map": "/marryfriends/static/css/main.84f7d46a.css.map",
+    "main.c4b9a4d2.js.map": "/marryfriends/static/js/main.c4b9a4d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84f7d46a.css",
+    "static/js/main.c4b9a4d2.js"
+  ]
+}
