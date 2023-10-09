@@ -19,9 +19,6 @@ module.exports = {
         slideDown: "slideDown 0.5s ease-out",
       },
     },
-    fontFamily: {
-      names: ["studioscriptctt"],
-    },
   },
   plugins: [],
 };

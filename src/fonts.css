@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'StudioScriptCTT';
-    font-style: normal;
-    font-weight: 400;
-    src: local('StudioScriptCTT'), local('StudioScriptCTT-Regular'),
-        url(http://allfont.ru/cache/fonts/studioscriptctt_9edb61594ca1f0f2b52a32a92a43fd3a.woff) format('woff'),
-        url(http://allfont.ru/cache/fonts/studioscriptctt_9edb61594ca1f0f2b52a32a92a43fd3a.ttf) format('truetype');
-  }
